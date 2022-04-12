@@ -8,15 +8,11 @@ import { Store } from '@ngrx/store';
 })
 export class CounterOutputComponent implements OnInit {
 
-  // @Input() counter:any;
-  counter: any;
+  @Input() counter:any;
 
-  constructor(private store: Store<{counter:{counter: number}}>) { }
+  constructor(){}
 
   ngOnInit(): void {
-    this.store.select('counter').subscribe(data => {
-      this.counter = data.counter;
-    })
   }
 
 }
