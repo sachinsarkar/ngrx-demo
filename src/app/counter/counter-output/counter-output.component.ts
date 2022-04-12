@@ -8,7 +8,6 @@ import { Store } from '@ngrx/store';
 })
 export class CounterOutputComponent implements OnInit {
 
-  // @Input() counter:any;
   counter: any;
 
   constructor(private store: Store<{counter:{counter: number}}>) { }

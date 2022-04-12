@@ -8,25 +8,10 @@ import { decrement, increment, reset } from '../state/counter.actions';
   styleUrls: ['./counter-buttons.component.css'],
 })
 export class CounterButtonsComponent implements OnInit {
-  // @Output() increment = new EventEmitter<void>();
-  // @Output() decrement = new EventEmitter<void>();
-  // @Output() reset = new EventEmitter<void>();
-
   constructor(private store: Store<{counter: {counter: number}}>) {}
 
   ngOnInit(): void {}
-
-  // onIncrement() {
-  //   this.increment.emit();
-  // }
-
-  // onDecrement() {
-  //   this.decrement.emit();
-  // }
-
-  // onReset() {
-  //   this.reset.emit();
-  // }
+  
   onIncrement(){
     this.store.dispatch(increment());
   }
